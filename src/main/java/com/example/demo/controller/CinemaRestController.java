@@ -16,7 +16,7 @@ import com.example.demo.servicve.CinemaServiceImp;
 
 @RestController
 @RequestMapping("cinema")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class CinemaRestController {
 
 	@Autowired

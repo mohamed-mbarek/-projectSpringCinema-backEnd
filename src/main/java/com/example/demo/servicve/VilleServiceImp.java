@@ -26,9 +26,12 @@ public class VilleServiceImp  implements VilleService{
 	}
 
 	public Ville updateVille(Ville ville) {
+		 int x=ville.getImage().indexOf("\\");
+		 if(x>0) {
 		String aa = ville.getImage();
 		String bb = ville.copy(aa);
 		ville.setImage(bb);
+		 }
 		return repository.save(ville);
 	}
 
